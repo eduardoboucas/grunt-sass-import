@@ -38,15 +38,15 @@ grunt.initConfig({
 ### Options
 
 #### options.basePath
-Type: `String`
-Default value: `''` (empty string)
+- Type: `String`
+- Default value: `''` (empty string)
 
 Defines the environment for the Sass files to live in. All the paths defined in `files` as well as the destination files will be relative to `basePath`.
 A common example would be setting `basePath` to `'sass/'`.
 
 #### options.includeExtension
-Type: `Boolean`
-Default value: `false`
+- Type: `Boolean`
+- Default value: `false`
 
 Whether to include file extensions in the `@import` statements (e.g. `@import file.scss` rather than `@import file`)
 
