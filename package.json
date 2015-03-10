@@ -1,6 +1,6 @@
 {
   "name": "grunt-sass-import",
-  "description": "Glob functionality for loading Sass partials",
+  "description": "A Grunt module for importing Sass partials with some notion of source order",
   "version": "0.1.0",
   "homepage": "https://github.com/eduardoboucas/grunt-sass-import",
   "author": {
@@ -18,7 +18,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/eduardoboucas/grunt-sass-import/blob/master/LICENSE-MIT"
+      "url": "https://github.com/eduardoboucas/grunt-sass-import/blob/master/LICENSE"
     }
   ],
   "engines": {

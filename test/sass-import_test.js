@@ -22,7 +22,7 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
-exports.sass-import = {
+exports.sass_import = {
   setUp: function(done) {
     // setup here if necessary
     done();

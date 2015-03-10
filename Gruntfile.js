@@ -59,6 +59,5 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'sass_import', 'nodeunit']);
 
   // By default, lint and run all tests.
-  //grunt.registerTask('default', ['jshint', 'test']);
-  grunt.registerTask('default', ['sass_import']);
+  grunt.registerTask('default', ['jshint', 'test']);
 };
