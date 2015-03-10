@@ -1,0 +1,42 @@
+{
+  "name": "grunt-sass-import",
+  "description": "Glob functionality for loading Sass partials",
+  "version": "0.1.0",
+  "homepage": "https://github.com/eduardoboucas/grunt-sass-import",
+  "author": {
+    "name": "Eduardo Boucas",
+    "email": "mail@eduardoboucas.com",
+    "url": "http://eduardoboucas.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eduardoboucas/grunt-sass-import.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eduardoboucas/grunt-sass-import/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/eduardoboucas/grunt-sass-import/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
