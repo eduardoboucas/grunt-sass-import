@@ -31,6 +31,7 @@ module.exports = function(grunt) {
     // Configuration to be run (and then tested).
     sass_import: {
       options: {
+        basePath: 'sass/'
       },
       dist: {
         files: {

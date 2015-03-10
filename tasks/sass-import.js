@@ -14,7 +14,8 @@ module.exports = function(grunt) {
     var includeExtension = false;
 
     var options = this.options({
-      includeExtension: false
+      includeExtension: false,
+      basePath: ''
     });
 
     this.files.forEach(function (file) {
@@ -27,7 +28,7 @@ module.exports = function(grunt) {
         if (typeof path == 'object') {
           // Handling *first* files
           if ('first' in path) {
-            grunt.file.expand(path.first).forEach(function (match) {
+            grunt.file.expand(options.basePath + path.first).forEach(function (match) {
               var file = splitFilename(match);
 
               // Discard if extension is now allowed
@@ -40,7 +41,7 @@ module.exports = function(grunt) {
           }
 
           // Handling regular files
-          grunt.file.expand(path.path).forEach(function (match) {
+          grunt.file.expand(options.basePath + path.path).forEach(function (match) {
             var file = splitFilename(match);
 
               // Discard if extension is now allowed
@@ -63,7 +64,7 @@ module.exports = function(grunt) {
 
           // Handling *last* files
           if ('last' in path) {
-            grunt.file.expand(path.last).forEach(function (match) {
+            grunt.file.expand(options.basePath + path.last).forEach(function (match) {
               var file = splitFilename(match);
 
               // Discard if extension is now allowed
@@ -76,7 +77,7 @@ module.exports = function(grunt) {
           }
         } else {
           // Simple syntax
-          grunt.file.expand(path).forEach(function (match) {
+          grunt.file.expand(options.basePath + path).forEach(function (match) {
             var file = splitFilename(match);
 
             // Discard if extension is now allowed
@@ -93,7 +94,7 @@ module.exports = function(grunt) {
         });
       });
 
-      grunt.file.write(file.dest, output);
+      grunt.file.write(options.basePath + file.dest, output);
       grunt.log.writeln('File "' + file.dest + '" created.');
     });
 
