@@ -1,6 +1,13 @@
 # grunt-sass-import
 
-> A Grunt module for importing Sass partials with some notion of source order
+> A Grunt module for importing Sass partials with (some very basic) notion of source order
+
+## What is this?
+If you use Sass to generate your stylesheets, then you're probably using partials to keep your code modular by separating it into different files. You probably also have different files for global rules, mixins, variables and whatnots. If this is the case, you probably have a main file where you `@import` all the other files.
+
+The annoying thing is that if you have a directory full of partials, you have to include them individually because Sass does not support globbing in the `@import` statements (i.e. you **can't** do `@import mixins/*`).
+
+This Grunt plugin brings that functionality and allows you to import entire directories into your Sass structure. Since source order actually matters in Sass, it offers a *very basic* mechanism for managing import order.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
