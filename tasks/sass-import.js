@@ -90,7 +90,7 @@ module.exports = function(grunt) {
         }
 
         resultFiles.forEach(function (file) {
-          output += buildOutputLine(file);
+          output += buildOutputLine(file.replace(options.basePath, ''));
         });
       });
 

@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'main.scss': [{last: 'global/_global.scss', path: 'global/*'}, 'mixins/*']
+          'main.scss': ['base/*', {last: 'global/_global.scss', path: 'global/*'}, 'helpers/*', 'modules/*']
         }
       }
     },
