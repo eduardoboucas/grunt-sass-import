@@ -68,9 +68,11 @@ If you don't care about source order, you can simply pass an array of file paths
 grunt.initConfig({
   sass_import: {
     options: {},
-    files: {
-      'main.scss': ['base/*', 'mixins/*', 'modules/*']
-    },
+    dist: {
+      files: {
+        'main.scss': ['base/*', 'mixins/*', 'modules/*']
+      }
+    }
   },
 });
 ```
