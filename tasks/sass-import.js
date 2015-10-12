@@ -50,12 +50,12 @@ module.exports = function(grunt) {
               }
 
               // Discard if already included in *first*
-              if (('first' in path) && (path.first.indexOf(file.name) != -1)) {
+              if (('first' in path) && (options.basePath.concat(path.first).indexOf(file.name) != -1)) {
                 return;
               }
 
               // Discard if present in *last*
-              if (('last' in path) && (path.last.indexOf(file.name) != -1)) {
+              if (('last' in path) && (options.basePath.concat(path.last).indexOf(file.name) != -1)) {
                 return;
               }
 
