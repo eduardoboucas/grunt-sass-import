@@ -8,6 +8,8 @@
 
 'use strict';
 
+var nodePath = require('path');
+
 module.exports = function(grunt) {
   grunt.registerMultiTask('sass_import', 'Glob functionality for loading Sass partials', function() {
     var allowedExtensions = ['.scss'];
@@ -20,6 +22,7 @@ module.exports = function(grunt) {
 
     this.files.forEach(function (file) {
       var output = '';
+      var destRoot = nodePath.dirname(options.basePath + file.dest);
 
       file.orig.src.forEach(function (path) {
         var resultFiles = [];
@@ -90,6 +93,7 @@ module.exports = function(grunt) {
         }
 
         resultFiles.forEach(function (file) {
+          file = nodePath.relative(destRoot, file);
           output += buildOutputLine(file.replace(options.basePath, ''));
         });
       });
