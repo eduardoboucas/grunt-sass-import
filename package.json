@@ -1,7 +1,7 @@
 {
   "name": "grunt-sass-import",
   "description": "A Grunt module for importing Sass partials with some notion of source order",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/eduardoboucas/grunt-sass-import",
   "author": {
     "name": "Eduardo Boucas",
