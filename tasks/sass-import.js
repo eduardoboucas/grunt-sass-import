@@ -103,7 +103,7 @@ module.exports = function(grunt) {
     });
 
     function splitFilename(filename) {
-      var dot = filename.indexOf('.');
+      var dot = filename.lastIndexOf('.');
 
       return {name: filename.substring(0, dot), extension: filename.substring(dot)};
     }
