@@ -93,7 +93,7 @@ module.exports = function(grunt) {
         }
 
         resultFiles.forEach(function (file) {
-          file = nodePath.relative(destRoot, file);
+          file = nodePath.relative(destRoot, file).replace(/\\/g, '/');
           output += buildOutputLine(file.replace(options.basePath, ''));
         });
       });
