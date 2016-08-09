@@ -112,5 +112,10 @@ module.exports = function(grunt) {
       return '@import \'' + file + '\';\n';
     }
   });
+  
+  grunt.registerMultiTask('sassImport', 'Glob functionality for loading Sass partials', function () {
+    grunt.config.set('sass_import', grunt.config.get('sassImport'));
+    grunt.task.run('sass_import');
+  });
 
 };
